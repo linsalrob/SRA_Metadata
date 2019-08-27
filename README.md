@@ -51,9 +51,9 @@ At the time of writing there were 27,838,771 entries (lines) in that file. Howev
 From those 1,413,223 unique submission IDs, the `Status` field reports
 
 * 1,290,528 live
-*  161,652 suppressed
-*   92,103 unpublished
-*       10 withdrawn
+* 161,652 suppressed
+* 92,103 unpublished
+* 10 withdrawn
 
 (These numbers don't quite add up because there are some projects where the project maybe be live, but the runs or other parts of the data release may be suppressed or unpublished.)
 
