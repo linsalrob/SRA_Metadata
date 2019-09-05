@@ -71,12 +71,12 @@ def write_id_map(data, imf, verbose=False):
             else:
                 time.sleep(0.1)
     acc = None
-    if 'SUBMISSION' in data and 'accession' in data['SUBMISSION']:
-        acc = data['SUBMISSION']['accession']
+    if 'SUBMISSION' in data and '@accession' in data['SUBMISSION']:
+        acc = data['SUBMISSION']['@accession']
         if verbose:
             sys.stderr.write(f"{bcolors.GREEN}ACCESSION: {acc}. Writing runs{bcolors.ENDC}\n")
     else:
-        sys.stderr.write(f"{bcolors.RED}FATAL. NO ACCESSION in {data}{bcolors.ENDC}")
+        sys.stderr.write(f"{bcolors.RED}FATAL. NO @accession in {data}{bcolors.ENDC}")
         sys.exit(-1)
 
     for run in data['RUN']:
