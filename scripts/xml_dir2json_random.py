@@ -73,12 +73,16 @@ def write_id_map(data, imf, verbose=False):
     acc = None
     if 'SUBMISSION' in data and 'accession' in data['SUBMISSION']:
         acc = data['SUBMISSION']['accession']
+        if verbose:
+            sys.stderr.write(f"{bcolors.GREEN}ACCESSION: {acc}. Writing runs{bcolors.ENDC}\n")
     else:
         sys.stderr.write(f"{bcolors.RED}FATAL. NO ACCESSION in {data}{bcolors.ENDC}")
         sys.exit(-1)
 
     for run in data['RUN']:
         if 'PRIMARY_ID' in  run['IDENTIFIERS']:
+            if verbose:
+                sys.stderr.write(f"\t{bcolors.GREEN}{run['IDENTIFIERS']['PRIMARY_ID']}{bcolors.ENDC}\n")
             out.write(f"{acc}\t{run['IDENTIFIERS']['PRIMARY_ID']}\n")
 
     fcntl.flock(out, fcntl.LOCK_UN)
@@ -191,7 +195,7 @@ if __name__ == "__main__":
 
         data = read_directory(args.d, submission, schemas, args.v)
 
-        write_id_map(args.m)
+        write_id_map(data, args.m, args.v)
 
         if args.v:
             sys.stderr.write(f"{bcolors.BLUE}Writing {bcolors.ENDC} {submission}\n")
