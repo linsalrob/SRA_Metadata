@@ -59,7 +59,7 @@ def write_id_map(data, imf, verbose=False):
     :return:
     """
 
-    out = open("XML_validation_errors.txt", "a")
+    out = open(imf, "a")
     while True:
         try:
             fcntl.flock(out, fcntl.LOCK_EX | fcntl.LOCK_NB)
