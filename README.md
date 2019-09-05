@@ -86,12 +86,12 @@ There are several [XML Schema Definition files](https://trace.ncbi.nlm.nih.gov/T
 
 # Converting the XML files to JSON
 
-We batch process the XML files and convert them to JSON, using [a Python script](scripts/xml2json.py). This code uses the XML Schema Definition files to validate the XML files, and then dumps a single file per submission in JSON format.
+We batch process the XML files and convert them to JSON, using [a Python script](xml2json/xml2json.py). This code uses the XML Schema Definition files to validate the XML files, and then dumps a single file per submission in JSON format.
 
 In reality, we use a version of that which chooses a file at random, checks to see if it has already been processed, and if not, it processes it. This allows us to run the code in parallel and process lots of XML files all at once.
 
 ```bash
-echo "python3.7 /home3/redwards/GitHubs/SRA_Metadata/scripts/xml_dir2json_random.py -d xml -o json -s $HOME/SRA/SRAdb/XML/Schemas/" > ./run_xml.sh
+echo "xml2json$HOME/SRA/SRAdb/XML/Schemas/" > ./run_xml.sh
 seq 1 30 | parallel ./run_xml.sh {}
 ```
 
