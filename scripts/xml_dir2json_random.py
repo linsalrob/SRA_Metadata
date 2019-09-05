@@ -13,6 +13,9 @@ import xmlschema
 from xmlschema.validators.exceptions import XMLSchemaValidationError
 import json
 import random
+import errno
+import time
+import fcntl
 from pprint import pprint
 __author__ = 'Rob Edwards'
 
@@ -29,10 +32,57 @@ def validation_errors(sample, error, verbose=False):
     if verbose:
         sys.stderr.write(f"{bcolors.PINK}Logging error for {sample}{bcolors.ENDC}\n")
 
-    with open("XML_validation_errors.txt", "a") as out:
-        out.write(f"\n=== BEGIN {sample} ===\n")
-        out.write(str(error))
-        out.write(f"\n=== END {sample} ===\n")
+    out = open("XML_validation_errors.txt", "a")
+    while True:
+        try:
+            fcntl.flock(out, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            break
+        except IOError as e:
+            # raise on unrelated IOErrors
+            if e.errno != errno.EAGAIN:
+                raise
+            else:
+                time.sleep(0.1)
+
+    out.write(f"\n=== BEGIN {sample} ===\n")
+    out.write(str(error))
+    out.write(f"\n=== END {sample} ===\n")
+    fcntl.flock(out, fcntl.LOCK_UN)
+    out.close()
+
+def write_id_map(data, imf, verbose=False):
+    """
+    Write an ID mapping file that has the SRA submission ID and the SRR Run ID
+    :param data: The JSON data object
+    :param imf: The id mapping file to write to
+    :param verbose: more output
+    :return:
+    """
+
+    out = open("XML_validation_errors.txt", "a")
+    while True:
+        try:
+            fcntl.flock(out, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            break
+        except IOError as e:
+            # raise on unrelated IOErrors
+            if e.errno != errno.EAGAIN:
+                raise
+            else:
+                time.sleep(0.1)
+    acc = None
+    if 'SUBMISSION' in data and 'accession' in data['SUBMISSION']:
+        acc = data['SUBMISSION']['accession']
+    else:
+        sys.stderr.write(f"{bcolors.RED}FATAL. NO ACCESSION in {data}{bcolors.ENDC}")
+        sys.exit(-1)
+
+    for run in data['RUN']:
+        if 'PRIMARY_ID' in  run['IDENTIFIERS']:
+            out.write(f"{acc}\t{run['IDENTIFIERS']['PRIMARY_ID']}\n")
+
+    fcntl.flock(out, fcntl.LOCK_UN)
+    out.close()
 
 def read_schemas(schemadir, verbose=True):
     """
@@ -109,6 +159,7 @@ if __name__ == "__main__":
     parser.add_argument('-o', help='where to put the json files.', required=True)
     parser.add_argument('-s', help='Schema directory', required=True)
     parser.add_argument('-f', help='force writing of the file, even if it exists', action='store_true')
+    parser.add_argument('-m', help="Run ID to Submission ID mapping file (default=srr_sra_ids.tsv)", default="srr_sra_ids.tsv")
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
 
@@ -139,6 +190,8 @@ if __name__ == "__main__":
             sys.stderr.write(f"{bcolors.GREEN}Parsing {bcolors.ENDC} {submission}\n")
 
         data = read_directory(args.d, submission, schemas, args.v)
+
+        write_id_map(args.m)
 
         if args.v:
             sys.stderr.write(f"{bcolors.BLUE}Writing {bcolors.ENDC} {submission}\n")
