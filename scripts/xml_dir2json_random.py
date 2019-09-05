@@ -79,12 +79,15 @@ def write_id_map(data, imf, verbose=False):
         sys.stderr.write(f"{bcolors.RED}FATAL. NO @accession in {data}{bcolors.ENDC}")
         sys.exit(-1)
 
-    for run in data['RUN']:
-        if 'PRIMARY_ID' in  run['IDENTIFIERS']:
-            if verbose:
-                sys.stderr.write(f"\t{bcolors.GREEN}{run['IDENTIFIERS']['PRIMARY_ID']}{bcolors.ENDC}\n")
-            out.write(f"{acc}\t{run['IDENTIFIERS']['PRIMARY_ID']}\n")
-
+    if 'RUN' in data:
+        for run in data['RUN']:
+            if 'PRIMARY_ID' in  run['IDENTIFIERS']:
+                if verbose:
+                    sys.stderr.write(f"\t{bcolors.GREEN}{run['IDENTIFIERS']['PRIMARY_ID']}{bcolors.ENDC}\n")
+                out.write(f"{acc}\t{run['IDENTIFIERS']['PRIMARY_ID']}\n")
+    else:
+        if verbose:
+            sys.stderr.write(f"{bcolors.PINK}No RUN found in {acc}{bcolors.ENDC}\n")
     fcntl.flock(out, fcntl.LOCK_UN)
     out.close()
 
