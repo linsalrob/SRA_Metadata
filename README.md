@@ -3,7 +3,7 @@ Get, parse, and extract information from the SRA metadata files
 
 # About the SRA metadata
 
-The SRA contains over 1.5 million samples, and each sample contains lots of runs. The metadata is really key to understanding that data, butthe metadata is difficult to organize and understand. Here we collate the metadata information available from the SRA to make it easier to search and find things.
+The SRA contains over 1.5 million samples, and each sample contains lots of runs. The metadata is really key to understanding that data, but the metadata is difficult to organize and understand. Here we collate the metadata information available from the SRA to make it easier to search and find things.
 
 # See also
 
@@ -88,7 +88,7 @@ There are several [XML Schema Definition files](https://trace.ncbi.nlm.nih.gov/T
 
 We batch process the XML files and convert them to JSON, using [a Python script](xml2json/xml_dir2json_random.py). This code uses the XML Schema Definition files to validate the XML files, and then dumps a single file per submission in JSON format.
 
-This version chooses a file at random from the XML directory, checks to see if it has already been processed, and if not, it processes it. This allows us to run the code in parallel and process lots of XML files all at once. For example, to process this code using 30 different processors, we can do:
+This version chooses a file at random from the XML directory, checks to see if it has already been processed, and if not, it processes it. This allows us to run the code in parallel (using the awesome [GNU parallel](https://www.gnu.org/software/parallel/) and process lots of XML files all at once. For example, to process this code using 30 different processors, we can do:
 
 ```bash
 echo "xml_dir2json_random.py -s $HOME/SRA/SRAdb/XML/Schemas/ -d xml -o json -m srr_sra_ids.tsv" > ./run_xml.sh
@@ -101,14 +101,13 @@ In addition, we create a file called `XML_validation_errors.txt` that reports an
 
 We now have a directory with all the metadata as json objects that you can analyze in different ways. 
 
-Before you begin, however, take a look at the [json_examples](json_examples/) data directory. These are 10 samples chosen completely at random from the August 2019 metadata to demonstrate the organization of the metadata there.
 
 
 # JSON
 
-We have some [JSON](json/) parsing code to help you explore the data. 
+We have some [JSON](json/) parsing code to help you explore the data. Before you begin, however, take a look at the [json_examples](json_examples/) data directory. These are ten samples chosen completely at random from the August 2019 metadata to demonstrate the organization of the metadata there.
 
-I also recommend using [jq](https://stedolan.github.io/jq/) for processing the data.
+I also recommend using [jq](https://stedolan.github.io/jq/) for processing the data on the command line.
 
 Here are a couple of examples from our [partie](https://github.com/linsalrob/partie) analysis of SRA datasets.
 
@@ -126,7 +125,7 @@ Now we can use [jq](https://stedolan.github.io/jq/) to extract just the run iden
 cat metagenomes.txt | xargs -i jq -r "try .RUN[].IDENTIFIERS.PRIMARY_ID" json/{}.json > metagenome_runs.txt
 ```
 
-[In this command, we cat the file of IDs, and for each file, we use `jq` to parse the json data. We look for any `RUN` and from that pull the `IDENTIFIERS` entry, and then the `PRIMARY_ID` for that run. This prints out one `PRIMARY_ID` per line.] 
+In this command, we cat the file of IDs, and for each file, we use `jq` to parse the json data. We look for any `RUN` and from that pull the `IDENTIFIERS` entry, and then the `PRIMARY_ID` for that run. This prints out one `PRIMARY_ID` per line. The `try` in that command is a jq option that is basic error handling. We could add both a `try` and a `catch`, and use that to report on any JSON files that do not have a RUN associated with them, however, at the moment we don't care about those ... we just ignore them!
 
 I don't know how to succinctly parse the XML to get this information (though you could probably do it with `grep`).
 
