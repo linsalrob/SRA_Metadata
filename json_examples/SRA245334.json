@@ -1,0 +1,175 @@
+{
+    "EXPERIMENT": [
+        {
+            "@alias": "1 Themisto libellula",
+            "@accession": "SRX895485",
+            "@center_name": "McGill University",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRX895485",
+                "SUBMITTER_ID": [
+                    {
+                        "@namespace": "McGill University",
+                        "$": "1 Themisto libellula"
+                    }
+                ]
+            },
+            "TITLE": "1 Themisto libellula V4 18S",
+            "STUDY_REF": {
+                "@accession": "SRP055766",
+                "IDENTIFIERS": {
+                    "PRIMARY_ID": "SRP055766",
+                    "EXTERNAL_ID": [
+                        {
+                            "@namespace": "SubPortal",
+                            "$": "SUB832829"
+                        }
+                    ]
+                }
+            },
+            "DESIGN": {
+                "DESIGN_DESCRIPTION": "A single individual of the species Themisto libellula was PCR amplified at the V4 region of 18S, using barcoded primers, and 454 sequenced along with PCR products of 19 other species.",
+                "SAMPLE_DESCRIPTOR": {
+                    "@accession": "SRS861262",
+                    "IDENTIFIERS": {
+                        "PRIMARY_ID": "SRS861262",
+                        "EXTERNAL_ID": [
+                            {
+                                "@namespace": "BioSample",
+                                "$": "SAMN03382336"
+                            }
+                        ]
+                    }
+                },
+                "LIBRARY_DESCRIPTOR": {
+                    "LIBRARY_NAME": "1 Themisto libellula V4 18S",
+                    "LIBRARY_STRATEGY": "AMPLICON",
+                    "LIBRARY_SOURCE": "METAGENOMIC",
+                    "LIBRARY_SELECTION": "PCR",
+                    "LIBRARY_LAYOUT": {
+                        "SINGLE": null
+                    }
+                },
+                "SPOT_DESCRIPTOR": {
+                    "SPOT_DECODE_SPEC": {
+                        "SPOT_LENGTH": 0,
+                        "READ_SPEC": [
+                            {
+                                "READ_INDEX": 0,
+                                "READ_CLASS": "Technical Read",
+                                "READ_TYPE": "Adapter",
+                                "BASE_COORD": 1
+                            },
+                            {
+                                "READ_INDEX": 1,
+                                "READ_CLASS": "Application Read",
+                                "READ_TYPE": "Forward",
+                                "BASE_COORD": 5
+                            }
+                        ]
+                    }
+                }
+            },
+            "PLATFORM": {
+                "LS454": {
+                    "INSTRUMENT_MODEL": "454 GS FLX Titanium"
+                }
+            },
+            "PROCESSING": null
+        }
+    ],
+    "RUN": [
+        {
+            "@alias": "1 Themisto libellula V4 18S",
+            "@accession": "SRR1823977",
+            "@center_name": "McGill University",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRR1823977",
+                "SUBMITTER_ID": [
+                    {
+                        "@namespace": "McGill University",
+                        "$": "1 Themisto libellula V4 18S"
+                    }
+                ]
+            },
+            "EXPERIMENT_REF": {
+                "@accession": "SRX895485"
+            }
+        }
+    ],
+    "SAMPLE": [
+        {
+            "@center_name": "McGill University",
+            "@alias": "1 Themisto libellula",
+            "@accession": "SRS861262",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRS861262",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMN03382336"
+                    }
+                ]
+            },
+            "TITLE": "1 Themisto libellula",
+            "SAMPLE_NAME": {
+                "TAXON_ID": 1169740,
+                "SCIENTIFIC_NAME": "aquatic metagenome"
+            },
+            "DESCRIPTION": "An individual Themisto libellula was DNA extracted, amplified with a barcoded primer at the V4 region of 18S, and 454 sequenced with 19 other species.",
+            "SAMPLE_LINKS": {
+                "SAMPLE_LINK": [
+                    {
+                        "XREF_LINK": {
+                            "DB": "bioproject",
+                            "ID": "277040",
+                            "LABEL": "PRJNA277040"
+                        }
+                    }
+                ]
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "collection_date",
+                        "VALUE": "missing"
+                    },
+                    {
+                        "TAG": "env_biome",
+                        "VALUE": "Aquatic"
+                    },
+                    {
+                        "TAG": "env_feature",
+                        "VALUE": "Aquatic"
+                    },
+                    {
+                        "TAG": "env_material",
+                        "VALUE": "Water"
+                    },
+                    {
+                        "TAG": "geo_loc_name",
+                        "VALUE": "USA: Chukchi Sea, Alaska"
+                    },
+                    {
+                        "TAG": "lat_lon",
+                        "VALUE": "missing"
+                    },
+                    {
+                        "TAG": "BioSampleModel",
+                        "VALUE": "MIMARKS.survey"
+                    },
+                    {
+                        "TAG": "BioSampleModel",
+                        "VALUE": "MIGS/MIMS/MIMARKS.miscellaneous"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@alias": "1 Themisto libellula",
+        "@lab_name": "Cristescu lab",
+        "@center_name": "McGill University",
+        "@accession": "SRA245334"
+    }
+}

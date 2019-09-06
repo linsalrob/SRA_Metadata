@@ -1,0 +1,131 @@
+{
+    "EXPERIMENT": [
+        {
+            "@alias": "2b-RAD data of Patinopecten yessoensis",
+            "@accession": "SRX1027271",
+            "@center_name": "Ocean University of China",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRX1027271",
+                "SUBMITTER_ID": [
+                    {
+                        "@namespace": "Ocean University of China",
+                        "$": "2b-RAD data of Patinopecten yessoensis"
+                    }
+                ]
+            },
+            "TITLE": "2b-RAD data from Genome Sequencing Project of Patinopecten yessoensis",
+            "STUDY_REF": {
+                "@accession": "SRP046829",
+                "IDENTIFIERS": {
+                    "PRIMARY_ID": "SRP046829"
+                }
+            },
+            "DESIGN": {
+                "DESIGN_DESCRIPTION": null,
+                "SAMPLE_DESCRIPTOR": {
+                    "@accession": "SRS935919",
+                    "IDENTIFIERS": {
+                        "PRIMARY_ID": "SRS935919"
+                    }
+                },
+                "LIBRARY_DESCRIPTOR": {
+                    "LIBRARY_NAME": null,
+                    "LIBRARY_STRATEGY": "OTHER",
+                    "LIBRARY_SOURCE": "GENOMIC",
+                    "LIBRARY_SELECTION": "PCR",
+                    "LIBRARY_LAYOUT": {
+                        "SINGLE": null
+                    }
+                },
+                "SPOT_DESCRIPTOR": {
+                    "SPOT_DECODE_SPEC": {
+                        "SPOT_LENGTH": 36,
+                        "READ_SPEC": [
+                            {
+                                "READ_INDEX": 0,
+                                "READ_CLASS": "Application Read",
+                                "READ_TYPE": "Forward",
+                                "BASE_COORD": 1
+                            }
+                        ]
+                    }
+                }
+            },
+            "PLATFORM": {
+                "ILLUMINA": {
+                    "INSTRUMENT_MODEL": "Illumina HiSeq 2000"
+                }
+            }
+        }
+    ],
+    "RUN": [
+        {
+            "@accession": "SRR2027758",
+            "@center_name": "Ocean University of China",
+            "@alias": "2b-RAD data of Patinopecten yessoensis",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRR2027758",
+                "SUBMITTER_ID": [
+                    {
+                        "@namespace": "Ocean University of China",
+                        "$": "2b-RAD data of Patinopecten yessoensis"
+                    }
+                ]
+            },
+            "EXPERIMENT_REF": {
+                "@accession": "SRX1027271"
+            }
+        }
+    ],
+    "SAMPLE": [
+        {
+            "@alias": "2b-RAD data of Patinopecten yessoensis",
+            "@accession": "SRS935919",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRS935919",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMN03657538"
+                    }
+                ]
+            },
+            "SAMPLE_NAME": {
+                "TAXON_ID": 6573,
+                "SCIENTIFIC_NAME": "Mizuhopecten yessoensis"
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "strain",
+                        "VALUE": "cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Lophotrochozoa; Mollusca; Bivalvia; Pteriomorphia; Pectinoida; Pectinoidea; Pectinidae; Mizuhopecten"
+                    },
+                    {
+                        "TAG": "age",
+                        "VALUE": "one-year and two-year old"
+                    },
+                    {
+                        "TAG": "sex",
+                        "VALUE": "not determined"
+                    },
+                    {
+                        "TAG": "tissue",
+                        "VALUE": "striated muscle"
+                    },
+                    {
+                        "TAG": "BioSampleModel",
+                        "VALUE": "Model organism or animal"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "@alias": "2b-RAD data of Patinopecten yessoensis",
+        "@submission_comment": "2b-RAD data from Genome Sequencing Project of Patinopecten yessoensis",
+        "@center_name": "Ocean University of China",
+        "@lab_name": "Ministry of Education Key Laboratory of Marine Gen",
+        "@accession": "SRA268165"
+    }
+}

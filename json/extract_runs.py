@@ -7,7 +7,7 @@ import os
 import sys
 import argparse
 
-from roblib import bcolors
+from sra_metadata_libs import bcolors
 
 def extract_runs(jf, verbose=False):
     """
@@ -42,4 +42,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     for j in os.listdir(args.d):
+        if not j.endswith('.json'):
+            sys.stderr.write(f"{bcolors.WARNING}{j} does not end in .json and so we skipped it. Is this a json file?{bcolors.ENDC}\n")
+            continue
         extract_runs(os.path.join(args.d, j))

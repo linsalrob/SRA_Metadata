@@ -1,0 +1,76 @@
+{
+    "SAMPLE": [
+        {
+            "@alias": "SAMEA3889671",
+            "@accession": "ERS1076805",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "ERS1076805",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMEA3889671"
+                    }
+                ]
+            },
+            "TITLE": "4ef65e50-c4e2-11e5-88b1-3c4a9275d6c6",
+            "SAMPLE_NAME": {
+                "TAXON_ID": 4932,
+                "SCIENTIFIC_NAME": "Saccharomyces cerevisiae"
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "Alias",
+                        "VALUE": "4ef65e50-c4e2-11e5-88b1-3c4a9275d6c6"
+                    },
+                    {
+                        "TAG": "ENA checklist",
+                        "VALUE": "ERC000011"
+                    },
+                    {
+                        "TAG": "INSDC center name",
+                        "VALUE": "SC"
+                    },
+                    {
+                        "TAG": "INSDC first public",
+                        "VALUE": "2016-10-05T09:26:57Z"
+                    },
+                    {
+                        "TAG": "INSDC last update",
+                        "VALUE": "2016-03-08T15:17:43Z"
+                    },
+                    {
+                        "TAG": "INSDC status",
+                        "VALUE": "public"
+                    },
+                    {
+                        "TAG": "SRA accession",
+                        "VALUE": "ERS1076805"
+                    },
+                    {
+                        "TAG": "Sample Name",
+                        "VALUE": "ERS1076805"
+                    },
+                    {
+                        "TAG": "Title",
+                        "VALUE": "3858STDY6309587"
+                    },
+                    {
+                        "TAG": "sample_description",
+                        "VALUE": "unknown"
+                    },
+                    {
+                        "TAG": "strain",
+                        "VALUE": "unknown"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@broker_name": "",
+        "@alias": "3858STDY6309587-sc-2517133",
+        "@accession": "ERA570895",
+        "@lab_name": "European Nucleotide Archive"
+    }
+}

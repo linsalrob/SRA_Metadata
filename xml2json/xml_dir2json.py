@@ -8,7 +8,7 @@ flag.
 import os
 import sys
 import argparse
-from roblib import bcolors
+from sra_metadata_libs import bcolors
 import xmlschema
 from xmlschema.validators.exceptions import XMLSchemaValidationError
 import json

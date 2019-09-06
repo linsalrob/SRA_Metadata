@@ -86,18 +86,29 @@ There are several [XML Schema Definition files](https://trace.ncbi.nlm.nih.gov/T
 
 # Converting the XML files to JSON
 
-We batch process the XML files and convert them to JSON, using [a Python script](xml2json/xml2json.py). This code uses the XML Schema Definition files to validate the XML files, and then dumps a single file per submission in JSON format.
+We batch process the XML files and convert them to JSON, using [a Python script](xml2json/xml_dir2json_random.py). This code uses the XML Schema Definition files to validate the XML files, and then dumps a single file per submission in JSON format.
 
-In reality, we use a version of that which chooses a file at random, checks to see if it has already been processed, and if not, it processes it. This allows us to run the code in parallel and process lots of XML files all at once.
+This version chooses a file at random from the XML directory, checks to see if it has already been processed, and if not, it processes it. This allows us to run the code in parallel and process lots of XML files all at once. For example, to process this code using 30 different processors, we can do:
 
 ```bash
-echo "xml2json$HOME/SRA/SRAdb/XML/Schemas/" > ./run_xml.sh
+echo "xml_dir2json_random.py -s $HOME/SRA/SRAdb/XML/Schemas/ -d xml -o json -m srr_sra_ids.tsv" > ./run_xml.sh
 seq 1 30 | parallel ./run_xml.sh {}
 ```
 
-This also creates a file called `XML_validation_errors.txt` that reports any improper XML data that does not match the XML Schema Defintions. 
+This command also creates an *id mapping* file called `srr_sra_ids.tsv` that has two columns, the SRA submission ID (or ERA/DBA ID) and the SRA Run ID. The most common association we are looking for is from SRR -> SRA. For example, we usually know the SRR IDs associated with a sequence run, and would like to explore the metadata associated with that run. Alternatively, we know a sample we would like to get the DNA sequences associated with. This mapping provides that connection, and you can quickly look for either a run or a submission using `grep`.
 
-We now have a directory with all the metadata as json objects that you can analyze in different ways. I recommend using [jq](https://stedolan.github.io/jq/) for processing the data.
+In addition, we create a file called `XML_validation_errors.txt` that reports any improper XML data that does not match the XML Schema Defintions. 
+
+We now have a directory with all the metadata as json objects that you can analyze in different ways. 
+
+Before you begin, however, take a look at the [json_examples](json_examples/) data directory. These are 10 samples chosen completely at random from the August 2019 metadata to demonstrate the organization of the metadata there.
+
+
+# JSON
+
+We have some [JSON](json/) parsing code to help you explore the data. 
+
+I also recommend using [jq](https://stedolan.github.io/jq/) for processing the data.
 
 Here are a couple of examples from our [partie](https://github.com/linsalrob/partie) analysis of SRA datasets.
 

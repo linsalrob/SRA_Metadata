@@ -1,0 +1,167 @@
+{
+    "EXPERIMENT": [
+        {
+            "@accession": "SRX5882665",
+            "@alias": "PNUSAS076100:wgs",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRX5882665",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "EDLB-CDC",
+                        "$": "PNUSAS076100:wgs"
+                    }
+                ]
+            },
+            "TITLE": null,
+            "STUDY_REF": {
+                "@accession": "SRP040281",
+                "IDENTIFIERS": {
+                    "PRIMARY_ID": "SRP040281",
+                    "EXTERNAL_ID": [
+                        {
+                            "@namespace": "BioProject",
+                            "$": "PRJNA230403"
+                        }
+                    ]
+                }
+            },
+            "DESIGN": {
+                "DESIGN_DESCRIPTION": null,
+                "SAMPLE_DESCRIPTOR": {
+                    "@accession": "SRS4805223",
+                    "IDENTIFIERS": {
+                        "PRIMARY_ID": "SRS4805223",
+                        "EXTERNAL_ID": [
+                            {
+                                "@namespace": "EDLB-CDC",
+                                "$": "PNUSAS076100"
+                            }
+                        ]
+                    }
+                },
+                "LIBRARY_DESCRIPTOR": {
+                    "LIBRARY_NAME": "NexteraXT",
+                    "LIBRARY_STRATEGY": "WGS",
+                    "LIBRARY_SOURCE": "GENOMIC",
+                    "LIBRARY_SELECTION": "RANDOM",
+                    "LIBRARY_LAYOUT": {
+                        "PAIRED": null
+                    },
+                    "LIBRARY_CONSTRUCTION_PROTOCOL": "NexteraXT"
+                }
+            },
+            "PLATFORM": {
+                "ILLUMINA": {
+                    "INSTRUMENT_MODEL": "Illumina MiSeq"
+                }
+            }
+        }
+    ],
+    "RUN": [
+        {
+            "@accession": "SRR9108043",
+            "@alias": "PNUSAS076100:wgs",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRR9108043",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "EDLB-CDC",
+                        "$": "PNUSAS076100:wgs"
+                    }
+                ]
+            },
+            "EXPERIMENT_REF": {
+                "@accession": "SRX5882665",
+                "IDENTIFIERS": {
+                    "EXTERNAL_ID": [
+                        {
+                            "@namespace": "EDLB-CDC",
+                            "$": "PNUSAS076100:wgs"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "SAMPLE": [
+        {
+            "@alias": "PNUSAS076100",
+            "@accession": "SRS4805223",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRS4805223",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMN11822565"
+                    }
+                ]
+            },
+            "TITLE": "Salmonella enterica",
+            "SAMPLE_NAME": {
+                "TAXON_ID": 28901,
+                "SCIENTIFIC_NAME": "Salmonella enterica"
+            },
+            "SAMPLE_LINKS": {
+                "SAMPLE_LINK": [
+                    {
+                        "XREF_LINK": {
+                            "DB": "bioproject",
+                            "ID": "230403",
+                            "LABEL": "PRJNA230403"
+                        }
+                    }
+                ]
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "strain",
+                        "VALUE": "PNUSAS076100"
+                    },
+                    {
+                        "TAG": "isolate",
+                        "VALUE": "Missing"
+                    },
+                    {
+                        "TAG": "isolation_source",
+                        "VALUE": "missing"
+                    },
+                    {
+                        "TAG": "collected_by",
+                        "VALUE": "CDC"
+                    },
+                    {
+                        "TAG": "collection_date",
+                        "VALUE": "missing"
+                    },
+                    {
+                        "TAG": "geo_loc_name",
+                        "VALUE": "USA"
+                    },
+                    {
+                        "TAG": "lat_lon",
+                        "VALUE": "missing"
+                    },
+                    {
+                        "TAG": "host",
+                        "VALUE": "missing"
+                    },
+                    {
+                        "TAG": "host_disease",
+                        "VALUE": "missing"
+                    },
+                    {
+                        "TAG": "BioSampleModel",
+                        "VALUE": "Pathogen.cl"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@lab_name": "",
+        "@center_name": "Pulsenet",
+        "@accession": "SRA889255",
+        "@alias": "SUB5658461"
+    }
+}

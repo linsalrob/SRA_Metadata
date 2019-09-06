@@ -1,0 +1,183 @@
+{
+    "EXPERIMENT": [
+        {
+            "@accession": "SRX2841104",
+            "@alias": "367250",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRX2841104",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "PHE",
+                        "$": "367250"
+                    }
+                ]
+            },
+            "TITLE": null,
+            "STUDY_REF": {
+                "@accession": "SRP042645",
+                "IDENTIFIERS": {
+                    "PRIMARY_ID": "SRP042645",
+                    "EXTERNAL_ID": [
+                        {
+                            "@namespace": "BioProject",
+                            "$": "PRJNA248792"
+                        }
+                    ]
+                }
+            },
+            "DESIGN": {
+                "DESIGN_DESCRIPTION": null,
+                "SAMPLE_DESCRIPTOR": {
+                    "@accession": "SRS2214451",
+                    "IDENTIFIERS": {
+                        "PRIMARY_ID": "SRS2214451",
+                        "EXTERNAL_ID": [
+                            {
+                                "@namespace": "PHE",
+                                "$": "367250.biosample"
+                            }
+                        ]
+                    }
+                },
+                "LIBRARY_DESCRIPTOR": {
+                    "LIBRARY_NAME": "367250",
+                    "LIBRARY_STRATEGY": "WGS",
+                    "LIBRARY_SOURCE": "GENOMIC",
+                    "LIBRARY_SELECTION": "RANDOM",
+                    "LIBRARY_LAYOUT": {
+                        "PAIRED": null
+                    },
+                    "LIBRARY_CONSTRUCTION_PROTOCOL": "Illumina Nextera XT"
+                }
+            },
+            "PLATFORM": {
+                "ILLUMINA": {
+                    "INSTRUMENT_MODEL": "Illumina HiSeq 2500"
+                }
+            }
+        }
+    ],
+    "RUN": [
+        {
+            "@accession": "SRR5583191",
+            "@alias": "367250",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRR5583191",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "PHE",
+                        "$": "367250"
+                    }
+                ]
+            },
+            "EXPERIMENT_REF": {
+                "@accession": "SRX2841104",
+                "IDENTIFIERS": {
+                    "EXTERNAL_ID": [
+                        {
+                            "@namespace": "PHE",
+                            "$": "367250"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "SAMPLE": [
+        {
+            "@alias": "367250.biosample",
+            "@accession": "SRS2214451",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRS2214451",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMN07152381"
+                    }
+                ]
+            },
+            "TITLE": "Salmonella enterica enterica serovar Salmonella Typhimurium 367250",
+            "SAMPLE_NAME": {
+                "TAXON_ID": 59201,
+                "SCIENTIFIC_NAME": "Salmonella enterica subsp. enterica"
+            },
+            "SAMPLE_LINKS": {
+                "SAMPLE_LINK": [
+                    {
+                        "XREF_LINK": {
+                            "DB": "bioproject",
+                            "ID": "248792",
+                            "LABEL": "PRJNA248792"
+                        }
+                    }
+                ]
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "strain",
+                        "VALUE": "367250"
+                    },
+                    {
+                        "TAG": "collected_by",
+                        "VALUE": "PHE"
+                    },
+                    {
+                        "TAG": "collection_date",
+                        "VALUE": "Apr-2017"
+                    },
+                    {
+                        "TAG": "isolation_source",
+                        "VALUE": "human"
+                    },
+                    {
+                        "TAG": "geo_loc_name",
+                        "VALUE": "United Kingdom: United Kingdom"
+                    },
+                    {
+                        "TAG": "lat_lon",
+                        "VALUE": "Missing"
+                    },
+                    {
+                        "TAG": "serovar",
+                        "VALUE": "Salmonella Typhimurium"
+                    },
+                    {
+                        "TAG": "isolate_name_alias",
+                        "VALUE": "367250"
+                    },
+                    {
+                        "TAG": "sequence_type",
+                        "VALUE": "19"
+                    },
+                    {
+                        "TAG": "sub_species",
+                        "VALUE": "enterica"
+                    },
+                    {
+                        "TAG": "potential_contaminant",
+                        "VALUE": "None detected"
+                    },
+                    {
+                        "TAG": "host",
+                        "VALUE": "Homo sapiens"
+                    },
+                    {
+                        "TAG": "host_disease",
+                        "VALUE": "Not available"
+                    },
+                    {
+                        "TAG": "BioSampleModel",
+                        "VALUE": "Pathogen.cl"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@lab_name": "",
+        "@center_name": "PHE",
+        "@accession": "SRA563707",
+        "@alias": "SUB2709487"
+    }
+}

@@ -1,0 +1,178 @@
+{
+    "EXPERIMENT": [
+        {
+            "@accession": "SRX3197638",
+            "@alias": "PNUSAS022123:wgs",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRX3197638",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "EDLB-CDC",
+                        "$": "PNUSAS022123:wgs"
+                    }
+                ]
+            },
+            "TITLE": null,
+            "STUDY_REF": {
+                "@accession": "SRP040281",
+                "IDENTIFIERS": {
+                    "PRIMARY_ID": "SRP040281",
+                    "EXTERNAL_ID": [
+                        {
+                            "@namespace": "BioProject",
+                            "$": "PRJNA230403"
+                        }
+                    ]
+                }
+            },
+            "DESIGN": {
+                "DESIGN_DESCRIPTION": null,
+                "SAMPLE_DESCRIPTOR": {
+                    "@accession": "SRS2524717",
+                    "IDENTIFIERS": {
+                        "PRIMARY_ID": "SRS2524717",
+                        "EXTERNAL_ID": [
+                            {
+                                "@namespace": "BioSample",
+                                "$": "SAMN07638965"
+                            }
+                        ]
+                    }
+                },
+                "LIBRARY_DESCRIPTOR": {
+                    "LIBRARY_NAME": "NexteraXT",
+                    "LIBRARY_STRATEGY": "WGS",
+                    "LIBRARY_SOURCE": "GENOMIC",
+                    "LIBRARY_SELECTION": "RANDOM",
+                    "LIBRARY_LAYOUT": {
+                        "PAIRED": null
+                    },
+                    "LIBRARY_CONSTRUCTION_PROTOCOL": "NexteraXT"
+                }
+            },
+            "PLATFORM": {
+                "ILLUMINA": {
+                    "INSTRUMENT_MODEL": "Illumina MiSeq"
+                }
+            }
+        }
+    ],
+    "RUN": [
+        {
+            "@accession": "SRR6050671",
+            "@alias": "PNUSAS022123:wgs",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRR6050671",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "EDLB-CDC",
+                        "$": "PNUSAS022123:wgs"
+                    }
+                ]
+            },
+            "EXPERIMENT_REF": {
+                "@accession": "SRX3197638",
+                "IDENTIFIERS": {
+                    "EXTERNAL_ID": [
+                        {
+                            "@namespace": "EDLB-CDC",
+                            "$": "PNUSAS022123:wgs"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "SAMPLE": [
+        {
+            "@alias": "PNUSAS022123",
+            "@accession": "SRS2524717",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRS2524717",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMN07638965"
+                    }
+                ]
+            },
+            "SAMPLE_NAME": {
+                "TAXON_ID": 436295,
+                "SCIENTIFIC_NAME": "Salmonella enterica subsp. enterica serovar Poona"
+            },
+            "SAMPLE_LINKS": {
+                "SAMPLE_LINK": [
+                    {
+                        "XREF_LINK": {
+                            "DB": "bioproject",
+                            "ID": "230403",
+                            "LABEL": "PRJNA230403"
+                        }
+                    }
+                ]
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "collection_date",
+                        "VALUE": "Jul-2017"
+                    },
+                    {
+                        "TAG": "strain",
+                        "VALUE": "PNUSAS022123"
+                    },
+                    {
+                        "TAG": "collected_by",
+                        "VALUE": "CDC"
+                    },
+                    {
+                        "TAG": "serovar",
+                        "VALUE": "Poona"
+                    },
+                    {
+                        "TAG": "lat_lon",
+                        "VALUE": "Missing"
+                    },
+                    {
+                        "TAG": "geo_loc_name",
+                        "VALUE": "USA"
+                    },
+                    {
+                        "TAG": "host",
+                        "VALUE": "Missing"
+                    },
+                    {
+                        "TAG": "isolation_source",
+                        "VALUE": "urine"
+                    },
+                    {
+                        "TAG": "HHS_region",
+                        "VALUE": "9"
+                    },
+                    {
+                        "TAG": "host_age",
+                        "VALUE": "10-19"
+                    },
+                    {
+                        "TAG": "host_disease",
+                        "VALUE": "Missing"
+                    },
+                    {
+                        "TAG": "sub_species",
+                        "VALUE": "enterica"
+                    },
+                    {
+                        "TAG": "BioSampleModel",
+                        "VALUE": "Pathogen.cl"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@lab_name": "",
+        "@center_name": "edlb-cdc",
+        "@accession": "SRA609343",
+        "@alias": "SUB3055691"
+    }
+}

@@ -1,0 +1,120 @@
+{
+    "SAMPLE": [
+        {
+            "@alias": "NWD511638",
+            "@accession": "SRS1784730",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "SRS1784730",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMN05552233"
+                    },
+                    {
+                        "@namespace": "dbGaP",
+                        "@label": "Sample name",
+                        "$": "951-NWD511638"
+                    },
+                    {
+                        "@namespace": "phs000951",
+                        "@label": "submitted sample id",
+                        "$": "NWD511638"
+                    }
+                ]
+            },
+            "TITLE": "Non-tumor DNA sample from Blood of a human female participant in the dbGaP study \"NHLBI TOPMed: Genetic Epidemiology of COPD (COPDGene) in the TOPMed Program\"",
+            "SAMPLE_NAME": {
+                "TAXON_ID": 9606,
+                "SCIENTIFIC_NAME": "Homo sapiens"
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "gap_accession",
+                        "VALUE": "phs000951"
+                    },
+                    {
+                        "TAG": "submitter handle",
+                        "VALUE": "NHLBI_COPDGene"
+                    },
+                    {
+                        "TAG": "biospecimen repository",
+                        "VALUE": "NHLBI_COPDGene"
+                    },
+                    {
+                        "TAG": "study name",
+                        "VALUE": "NHLBI TOPMed: Genetic Epidemiology of COPD (COPDGene) in the TOPMed Program"
+                    },
+                    {
+                        "TAG": "study design",
+                        "VALUE": "Case-Control"
+                    },
+                    {
+                        "TAG": "biospecimen repository sample id",
+                        "VALUE": "NWD511638"
+                    },
+                    {
+                        "TAG": "submitted sample id",
+                        "VALUE": "NWD511638"
+                    },
+                    {
+                        "TAG": "submitted subject id",
+                        "VALUE": "COPDGene_G31211"
+                    },
+                    {
+                        "TAG": "gap_sample_id",
+                        "VALUE": "2064233"
+                    },
+                    {
+                        "TAG": "gap_subject_id",
+                        "VALUE": "432226"
+                    },
+                    {
+                        "TAG": "sex",
+                        "VALUE": "female"
+                    },
+                    {
+                        "TAG": "body site",
+                        "VALUE": "Blood"
+                    },
+                    {
+                        "TAG": "histological type",
+                        "VALUE": "Blood"
+                    },
+                    {
+                        "TAG": "analyte type",
+                        "VALUE": "DNA"
+                    },
+                    {
+                        "TAG": "is tumor",
+                        "VALUE": "No"
+                    },
+                    {
+                        "TAG": "subject is affected",
+                        "VALUE": "No"
+                    },
+                    {
+                        "TAG": "molecular data type",
+                        "VALUE": "SNP/CNV Genotypes (NGS)"
+                    },
+                    {
+                        "TAG": "gap_consent_code",
+                        "VALUE": "1"
+                    },
+                    {
+                        "TAG": "gap_consent_short_name",
+                        "VALUE": "HMB-MDS"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@alias": "NWD511638.expt.submit",
+        "@center_name": "Broad Institute",
+        "@broker_name": "UM-SPH",
+        "@lab_name": "Abecasis",
+        "@submission_comment": "",
+        "@accession": "SRA490640"
+    }
+}

@@ -1,0 +1,219 @@
+{
+    "EXPERIMENT": [
+        {
+            "@alias": "EXP-68-1-2016-08-23_13-12-12",
+            "@accession": "ERX1667430",
+            "@broker_name": "",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "ERX1667430",
+                "SUBMITTER_ID": [
+                    {
+                        "@namespace": "IFH_MS",
+                        "$": "EXP-68-1-2016-08-23_13-12-12"
+                    },
+                    {
+                        "@namespace": "University Hospital Muenster",
+                        "$": "EXP-68-1-2016-08-23_13-12-12"
+                    }
+                ]
+            },
+            "TITLE": "Illumina MiSeq paired end sequencing; EXP-68-1-2016-08-23_13-12-12",
+            "STUDY_REF": {
+                "@accession": "ERP016940",
+                "IDENTIFIERS": {
+                    "PRIMARY_ID": "ERP016940"
+                }
+            },
+            "DESIGN": {
+                "DESIGN_DESCRIPTION": null,
+                "SAMPLE_DESCRIPTOR": {
+                    "@accession": "ERS1305242",
+                    "IDENTIFIERS": {
+                        "PRIMARY_ID": "ERS1305242",
+                        "EXTERNAL_ID": [
+                            {
+                                "@namespace": "BioSample",
+                                "$": "SAMEA4393793"
+                            }
+                        ]
+                    }
+                },
+                "LIBRARY_DESCRIPTOR": {
+                    "LIBRARY_NAME": "unspecified",
+                    "LIBRARY_STRATEGY": "WGS",
+                    "LIBRARY_SOURCE": "GENOMIC",
+                    "LIBRARY_SELECTION": "RANDOM",
+                    "LIBRARY_LAYOUT": {
+                        "PAIRED": {
+                            "@NOMINAL_LENGTH": 300
+                        }
+                    }
+                },
+                "SPOT_DESCRIPTOR": {
+                    "SPOT_DECODE_SPEC": {
+                        "SPOT_LENGTH": 500,
+                        "READ_SPEC": [
+                            {
+                                "READ_INDEX": 0,
+                                "READ_LABEL": "F1",
+                                "READ_CLASS": "Application Read",
+                                "READ_TYPE": "Forward",
+                                "BASE_COORD": 1
+                            },
+                            {
+                                "READ_INDEX": 1,
+                                "READ_LABEL": "R2",
+                                "READ_CLASS": "Application Read",
+                                "READ_TYPE": "Reverse",
+                                "BASE_COORD": 251
+                            }
+                        ]
+                    }
+                }
+            },
+            "PLATFORM": {
+                "ILLUMINA": {
+                    "INSTRUMENT_MODEL": "Illumina MiSeq"
+                }
+            }
+        }
+    ],
+    "RUN": [
+        {
+            "@accession": "ERR1596844",
+            "@alias": "NGSRT18C2 exp EXP-68-1-2016-08-23_13-12-12 run 1",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "ERR1596844",
+                "SUBMITTER_ID": [
+                    {
+                        "@namespace": "IFH_MS",
+                        "$": "NGSRT18C2 exp EXP-68-1-2016-08-23_13-12-12 run 1"
+                    },
+                    {
+                        "@namespace": "University Hospital Muenster",
+                        "$": "NGSRT18C2 exp EXP-68-1-2016-08-23_13-12-12 run 1"
+                    }
+                ]
+            },
+            "TITLE": "Illumina MiSeq paired end sequencing; EXP-68-1-2016-08-23_13-12-12",
+            "EXPERIMENT_REF": {
+                "@accession": "ERX1667430",
+                "IDENTIFIERS": {
+                    "PRIMARY_ID": "ERX1667430"
+                }
+            },
+            "SPOT_DESCRIPTOR": {
+                "SPOT_DECODE_SPEC": {
+                    "SPOT_LENGTH": 502,
+                    "READ_SPEC": [
+                        {
+                            "READ_INDEX": 0,
+                            "READ_CLASS": "Application Read",
+                            "READ_TYPE": "Forward",
+                            "BASE_COORD": 1
+                        },
+                        {
+                            "READ_INDEX": 1,
+                            "READ_CLASS": "Application Read",
+                            "READ_TYPE": "Reverse",
+                            "BASE_COORD": 252
+                        }
+                    ]
+                }
+            },
+            "RUN_ATTRIBUTES": {
+                "RUN_ATTRIBUTE": [
+                    {
+                        "TAG": "ENA-FIRST-PUBLIC",
+                        "VALUE": "2016-12-25"
+                    },
+                    {
+                        "TAG": "ENA-LAST-UPDATE",
+                        "VALUE": "2018-11-16"
+                    }
+                ]
+            }
+        }
+    ],
+    "SAMPLE": [
+        {
+            "@alias": "SAMEA4393793",
+            "@accession": "ERS1305242",
+            "IDENTIFIERS": {
+                "PRIMARY_ID": "ERS1305242",
+                "EXTERNAL_ID": [
+                    {
+                        "@namespace": "BioSample",
+                        "$": "SAMEA4393793"
+                    }
+                ]
+            },
+            "TITLE": "NGSRT18C2",
+            "SAMPLE_NAME": {
+                "TAXON_ID": 1280,
+                "SCIENTIFIC_NAME": "Staphylococcus aureus"
+            },
+            "SAMPLE_ATTRIBUTES": {
+                "SAMPLE_ATTRIBUTE": [
+                    {
+                        "TAG": "Alias",
+                        "VALUE": "NGSRT18C2"
+                    },
+                    {
+                        "TAG": "ENA checklist",
+                        "VALUE": "ERC000011"
+                    },
+                    {
+                        "TAG": "INSDC center name",
+                        "VALUE": "IFH_MS"
+                    },
+                    {
+                        "TAG": "INSDC first public",
+                        "VALUE": "2016-12-25T17:01:10Z"
+                    },
+                    {
+                        "TAG": "INSDC last update",
+                        "VALUE": "2016-08-23T15:37:20Z"
+                    },
+                    {
+                        "TAG": "INSDC status",
+                        "VALUE": "public"
+                    },
+                    {
+                        "TAG": "SRA accession",
+                        "VALUE": "ERS1305242"
+                    },
+                    {
+                        "TAG": "Sample Name",
+                        "VALUE": "ERS1305242"
+                    },
+                    {
+                        "TAG": "Title",
+                        "VALUE": "NGSRT18C2"
+                    },
+                    {
+                        "TAG": "collection_date",
+                        "VALUE": "not available"
+                    },
+                    {
+                        "TAG": "country",
+                        "VALUE": "not available"
+                    },
+                    {
+                        "TAG": "host",
+                        "VALUE": "Homo sapiens"
+                    },
+                    {
+                        "TAG": "host_associated",
+                        "VALUE": "Yes"
+                    }
+                ]
+            }
+        }
+    ],
+    "SUBMISSION": {
+        "@alias": "NGSRT18C2 sub 1",
+        "@accession": "ERA693801",
+        "@lab_name": "European Nucleotide Archive"
+    }
+}
