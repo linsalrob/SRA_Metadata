@@ -185,7 +185,10 @@ if __name__ == "__main__":
     fs = os.listdir(args.d)
     random.shuffle(fs)
     for submission in fs:
-        outfile = os.path.join(args.o, f"{submission}.json")
+        outpath = os.path.join(args.o, submission[0:3], submission[0:6])
+        if not os.path.exists(outpath):
+            os.makedirs(outpath, exist_ok=True)
+        outfile = os.path.join(args.o, submission[0:3], submission[0:6], f"{submission}.json")
         if (not args.f) and os.path.exists(outfile):
             continue
         # we create the semaphore file that is empty so we don't try and do this twice
