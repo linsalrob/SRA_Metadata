@@ -76,6 +76,7 @@ def write_id_map(data, imf, verbose=False):
         if verbose:
             sys.stderr.write(f"{bcolors.GREEN}ACCESSION: {acc}. Writing runs{bcolors.ENDC}\n")
     else:
+        # note that we now test for this earlier, so shouldn't really get here!
         sys.stderr.write(f"{bcolors.RED}FATAL. NO @accession in {data}{bcolors.ENDC}")
         sys.exit(-1)
 
@@ -200,6 +201,13 @@ if __name__ == "__main__":
             sys.stderr.write(f"{bcolors.GREEN}Parsing {bcolors.ENDC} {submission}\n")
 
         data = read_directory(args.d, submission, schemas, args.v)
+
+        if 'SUBMISSION' not in data:
+            sys.stderr.write(f"No SUBMISSION read for {submission}. Skipped\n")
+            continue
+        elif '@accession' not in data['SUBMISSION']:
+            sys.stderr.write(f"No @accession in the SUBMISSION for {submission}. Skipped\n")
+            continue
 
         write_id_map(data, args.m, args.v)
 
