@@ -6,6 +6,7 @@ import os
 import sys
 import argparse
 import fcntl
+import pickle
 import xmlschema
 from xmlschema.validators.exceptions import XMLSchemaValidationError
 import json
@@ -31,6 +32,18 @@ def validation_errors(sample, error, verbose=False):
         out.write(str(error))
         out.write(f"\n=== END {sample} ===\n")
         fcntl.flock(out, fcntl.LOCK_UN)
+
+def read_schema_pickle(picklefile, verbose=False):
+    """
+    Read the schema from a pickle file
+    """
+    if verbose:
+        sys.stderr.write(f"Reading pickle file {picklefile}\n")
+
+    with open(picklefile, 'rb') as f:
+        schemas = pickle.load(f)
+
+    return schemas
 
 def read_schemas(schemadir, verbose=True):
     """
@@ -107,10 +120,16 @@ if __name__ == "__main__":
     parser.add_argument('-d', help='directory with the submission diretories', required=True)
     parser.add_argument('-x', help='Sample ID to parse', required=True)
     parser.add_argument('-o', help='where to put the json files.', required=True)
-    parser.add_argument('-s', help='Schema directory', required=True)
+    parser.add_argument('-s', help='Schema directory')
+    parser.add_argument('-p', help='Schema pickle')
     parser.add_argument('-f', help='force writing of the file, even if it exists', action='store_true')
     parser.add_argument('-v', help='verbose output', action='store_true')
     args = parser.parse_args()
+
+
+    if not args.s and not args.p:
+        sys.stderr.write("FATAL: Please provide a schema either as a directory or a pickle file\n")
+        sys.exit(-1)
 
     # read all the files in the base directory
     outfile = os.path.join(args.o, f"{args.x}.json")
@@ -118,10 +137,20 @@ if __name__ == "__main__":
         sys.exit(0)
 
     # read all the known schemas
-    if not os.path.exists(args.s):
-        sys.stderr.write(f"FATAL: {args.s} directory with known xml schemas not found\n")
+    schemas = None
+    if args.p:
+        schemas = read_schema_pickle(args.p, args.v)
+
+    if args.s:
+        if not os.path.exists(args.s):
+            sys.stderr.write(f"FATAL: {args.s} directory with known xml schemas not found\n")
+            sys.exit(-1)
+        schemas = read_schemas(args.s, args.v)
+
+    if not schemas:
+        sys.stderr.write("FATAL: Could not read your schemas\n")
         sys.exit(-1)
-    schemas = read_schemas(args.s, args.v)
+
 
     if not os.path.exists(args.o):
         os.mkdir(args.o)
