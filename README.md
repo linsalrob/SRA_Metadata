@@ -1,3 +1,4 @@
+[![Edwards Lab](https://img.shields.io/badge/Bioinformatics-EdwardsLab-03A9F4)](https://edwards.sdsu.edu/research)
 # SRA_Metadata
 Get, parse, and extract information from the SRA metadata files
 
