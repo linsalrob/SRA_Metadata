@@ -1,4 +1,4 @@
-[![Edwards Lab](https://img.shields.io/badge/Bioinformatics-EdwardsLab-03A9F4)](https://edwards.sdsu.edu/research)
+[![Edwards Lab](https://img.shields.io/badge/Bioinformatics-EdwardsLab-03A9F4)](https://edwards.flinders.edu.au)
 # SRA_Metadata
 Get, parse, and extract information from the SRA metadata files
 
@@ -6,13 +6,10 @@ Get, parse, and extract information from the SRA metadata files
 
 The SRA contains over 1.5 million samples, and each sample contains lots of runs. The metadata is really key to understanding that data, but the metadata is difficult to organize and understand. Here we collate the metadata information available from the SRA to make it easier to search and find things.
 
-## TL;DR
-
-You can download all the SRA Metadata in [JSON format](https://edwards.sdsu.edu/data/sra/current.tar.gz) and then read the README.txt file in that archive. We have some tools here to help parse those JSON files, but `grep` and `jq` will get you a long way.
 
 ## See also
 
-You might also look at our [collection of blog posts](https://edwards.sdsu.edu/research/sra) about the SRA that explain the organization of the SRA data, and provide alternate mechanisms to download the data, and so on.
+You might also look at our [collection of blog posts](https://edwards.flinders.edu.au/sra) about the SRA that explain the organization of the SRA data, and provide alternate mechanisms to download the data, and so on.
 
 # Downloading the SRA metadata
 
@@ -110,10 +107,6 @@ This command also creates an *id mapping* file called `srr_sra_ids.tsv` that has
 In addition, we create a file called `XML_validation_errors.txt` that reports any improper XML data that does not match the XML Schema Defintions. 
 
 We now have a directory with all the metadata as json objects that you can analyze in different ways. 
-
-# Download preconverted JSON files
-
-We strive to make the latest versions of this metadata available for [download from our website](https://edwards.sdsu.edu/data/sra/current.tar.gz). That tar archive contains the JSON files, arranged as described above, the SRA -> SRR mapping file, and a README.txt file describing the data.
 
 # JSON
 
